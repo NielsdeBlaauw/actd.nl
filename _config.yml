@@ -3,6 +3,10 @@ show_downloads: false
 google_analytics: UA-131573516-1
 permalink: pretty
 
+collections:
+  events:
+    output: true
+
 plugins:
   - jekyll-relative-links
 

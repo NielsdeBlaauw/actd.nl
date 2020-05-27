@@ -1,0 +1,38 @@
+{% include header.html %}
+  <section>
+    <h1>{{ page.title }}</h1>
+
+    {% if page.abstract %}
+      <h2>Abstract</h2>
+      {{ page.abstract|markdownify}}
+    {% endif %}
+
+    {% if page.slides %}
+      <h2>Slides</h2>
+      {{page.slides}}
+      <br /><br />
+    {% endif %}
+
+    {{ content }}
+
+    <h2>Event data</h2>
+    <table>
+      <tr>
+        <th>Event date</th>
+        <td>{{page.eventDate| date_to_long_string: "ordinal", "US"}}</td>
+      </tr>
+      {% if page.eventPage %}
+        <tr>
+          <th>Event page</th>
+          <td><a href='{{page.eventPage}}'>{{page.eventPage|truncate:30}}</a></td>
+        </tr>
+      {% endif %}
+      {% if page.format %}
+        <tr>
+          <th>Format</th>
+          <td>{{ page.format }}</td>
+        </tr>
+      {% endif %}
+    </table>
+  </section>
+{% include footer.html %}
