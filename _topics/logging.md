@@ -1,5 +1,7 @@
 ---
 title: Logging & handling exceptions
+layout: topic
+order: 2
 ---
 
 ## PHP & Monolog
@@ -87,7 +89,6 @@ While [GravityForms](https://docs.gravityforms.com/custom-logging-statements/) p
 GFCommon::log_debug('Foo');
 GFCommon::log_error('Bar');
 ```
-
 
 ## Centralised logging
 
