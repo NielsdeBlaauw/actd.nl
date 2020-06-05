@@ -1,3 +1,17 @@
 theme: jekyll-theme-minimal
 show_downloads: false
 google_analytics: UA-131573516-1
+permalink: pretty
+
+collections:
+  events:
+    output: true
+  topics:
+    output: true
+    sort_by: order
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled:     true
