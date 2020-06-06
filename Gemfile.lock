@@ -243,6 +243,7 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-relative-links
+  jekyll-sitemap
 
 BUNDLED WITH
    2.1.4
