@@ -10,8 +10,11 @@ collections:
     output: true
     sort_by: order
 
+url: "https://actd.nl"
+
 plugins:
   - jekyll-relative-links
+  - jekyll-sitemap
 
 relative_links:
   enabled:     true
