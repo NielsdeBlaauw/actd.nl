@@ -10,7 +10,6 @@ tags: [
 ]
 ---
 
-## Introduction
 Is your website slow? Does it use a lot of resources to do what others seem to handle effortlessly? Don't know where to start fixing it?
 
 Optimising a website is a creative exercise, but it also requires a process to identify issues. I will outline the steps I use to identify, analyse and fix performance issues.
@@ -19,7 +18,7 @@ The examples in this article will be geared towards WordPress and the specific s
 
 Remember: *[premature optimisation is the root of all evil](https://stackify.com/premature-optimization-evil/)*. Identification and analysis is an important step. You should not be 'fixing' any code before you are sure it's causing performance issues.
 
-### Why
+## Why
 The performance and efficiency of a website is important. 
 
 An optimized website improves conversion, lowers hosting costs, provides a great user experience and is good for the environment.
@@ -119,7 +118,14 @@ There are a lot of tools available to help identify bottlenecks. The type of iss
 
 ### Backend issue identification
 
+|       |               | **Environment**                                    |                                                                            |
+|-------|---------------|------------------------------------------------|----------------------------------------------------------------------------|
+|       |               | **Production**                                     | **Local**                                                                      |
+| **Phase** | **Finding**       | [SQL Slow log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html),<br>[PHP Slow log](https://serverpilot.io/docs/how-to-read-the-php-slow-request-log/),  <br>[WP Profile](https://github.com/wp-cli/profile-command) | [Laps](https://github.com/Rarst/laps), <br>[Query Monitor](https://github.com/johnbillion/query-monitor), <br>Profiling [xDebug (free)](https://xdebug.org/docs/profiler), [blackfire (paid)](https://blackfire.io/),<br>[Twig profile](https://twig.symfony.com/doc/2.x/api.html#profiler-extension)                    |
+|       | **Understanding** | [PHPSpy](https://github.com/adsr/phpspy)                                         | Profiling [xDebug (free)](https://xdebug.org/docs/profiler), [blackfire (paid)](https://blackfire.io/), <br>[SQL Explain statements](https://dev.mysql.com/doc/refman/8.0/en/explain.html), <br>[Twig profile](https://twig.symfony.com/doc/2.x/api.html#profiler-extension) |
+
 ### Frontend issue identification
+The main tool I use for finding frontend issues is [Lighthouse](https://developers.google.com/web/tools/lighthouse).
 
 ## Fixing
 At this time we should have identified a probable performance issue. Let's start fixing it! This might be as easy as disabling/replacing a plugin, or rewriting entire data structures.
