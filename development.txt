@@ -1,0 +1,4 @@
+1. Install [prerequesites](https://jekyllrb.com/docs/installation/)
+2. Install bundler: `gem install bundler`
+3. Install gems: `bundle install`
+4. Start server: `bundle exec jekyll serve --port 8081`
